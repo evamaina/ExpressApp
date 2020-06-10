@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "\"nyc mocha && nyc report --reporter=text-lcov | coveralls\"",
+    "test": "nyc mocha 'tests/**/*.js' --recursive --require @babel/register  && nyc report --reporter=text-lcov",
     "build": "babel server.js --out-dir build",
     "dev-start": "babel-watch server.js",
     "start": "node server.js"
@@ -18,15 +18,20 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "moment": "^2.26.0",
+    "morgan": "^1.10.0",
     "uuid": "^8.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.1",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
     "babel-watch": "^7.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.21.2"
+    "eslint-plugin-import": "^2.21.2",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "supertest": "^4.0.2"
   }
 }

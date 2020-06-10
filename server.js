@@ -1,14 +1,11 @@
-import express from 'express';
-import userRouter from './src/user.router';
+import http from 'http';
+import app from './app';
 
-const app = express();
+const server = http.createServer(app);
 
-app.use(express.json());
+const port = 3000;
 
-// set up user router
-app.use('/api', userRouter);
-
-app.use('*', (req, res) => res.status(404).send({ message: 'the requested resource cannot be found' }));
-
-app.listen(3000);
-console.log('app running on port ', 3000);
+server.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`Server started at port ${port}.`);
+});

@@ -6,15 +6,15 @@ const router = express.Router();
 router.get('/users', (req, res) => {
   const userModel = new User();
   const users = userModel.getAll();
-  res.status(200).json(users);
+  return res.status(200).json(users);
 });
 
 router.get('/users/:id', (req, res) => {
   const userModel = new User();
   const { id } = req.params;
   const user = userModel.get(id);
-  const status = user == -1 ? 404 : 200;
-  res.status(status).json(user);
+  const status = user === -1 ? 404 : 200;
+  return res.status(status).json(user);
 });
 
 export default router;
