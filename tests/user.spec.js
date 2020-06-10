@@ -39,7 +39,7 @@ describe('GET /users', () => {
 
   it('returns a 404 error for an invalid url path', (done) => {
     request(app)
-      .get('nonexistent url')
+      .get('/nonexistenturl')
       .set('Accept', 'application/json')
       .expect(404, done);
   });
