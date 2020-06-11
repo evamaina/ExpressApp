@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import app from '../src/app';
+import app from '../app';
 
 const request = require('supertest');
 const assert = require('assert');
