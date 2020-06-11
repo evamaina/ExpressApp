@@ -30,3 +30,10 @@ Node:
 ## Test
 
 -  `npm test`
+
+## Endpoints
+
+| VERB   | URL                                | ACTION                                     |
+| ------ | ---------------------------------- | ------------------------------------------ |
+| GET    | /api/users                         | Get all users                              |
+| GET    | /api/users/:id                     | Get user by id  (currently only 1-6)       |
