@@ -9,9 +9,9 @@
   "scripts": {
     "test": "nyc mocha 'tests/**/*.js' --recursive --require @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "build": "babel server.js --out-dir build",
-    "dev-start": "babel-watch server.js",
-    "start": "node server.js"
+    "build": "babel src/server.js --out-dir build",
+    "dev-start": "babel-watch src/server.js",
+    "start": "node src/server.js"
   },
   "author": "Eva Maina",
   "license": "MIT",

@@ -15,7 +15,9 @@ class User {
   get(id) {
     // get user from json file using id
     // returns -1 if not found
-    return this.users[id] || -1;
+    const user = this.users.filter((usr) => usr.id === id);
+    const result = user.length === 0 ? -1 : user[0];
+    return result;
   }
 
   // create(user){

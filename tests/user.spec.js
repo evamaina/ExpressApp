@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import app from '../app';
+import app from '../src/app';
 
 const request = require('supertest');
 const assert = require('assert');
@@ -21,7 +21,7 @@ describe('GET /users', () => {
       .set('Accept', 'application/json')
       .expect(200)
       .end((err, { body }) => {
-        assert(body[6]);
+        assert(body.length, 6);
         // console.log(body[6]);
         done();
       });
