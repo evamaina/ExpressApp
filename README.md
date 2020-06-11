@@ -7,18 +7,26 @@
 NodeJs Express RESTful API
 Ensure you have nodejs >= 12 installed
 
-## Run
+## Run Application
 
-Clone Application
-`git clone https://github.com/evamaina/ExpressApp` 
+Clone
+
+- `git clone https://github.com/evamaina/ExpressApp` 
 
 Install dependencies
-`npm install`
 
-Run Application
-Live-Reload: `npm run dev-start`
-Node: `npm start`
+- `npm install`
+
+### Start
+
+Live-Reload: 
+
+- `npm run dev-start`
+
+Node: 
+
+- `npm start`
 
 ## Test
 
-run `npm test`
+-  `npm test`
